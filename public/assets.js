@@ -3,12 +3,14 @@ const ecommerce=require('./ecommerce.webp')
 const medical=require('./medical.avif')
 const music=require('./music.png')
 const vpn=require('./vpn.png')
+const men=require('./men.webp')
 
 export const assets = {
   dating,
   ecommerce,
   medical,
   music,
-  vpn
+  vpn,
+  men
 }
 
