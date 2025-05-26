@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import React, { use } from 'react'
+import React from 'react'
 import { assets } from '../../public/assets'
 
 export default function About() {
@@ -10,7 +10,7 @@ export default function About() {
             <div className='flex flex-col md:flex-row justify-between items-start md:items-center mt-10 md:mt-20 gap-4 md:gap-0'>
                 <h1 className='text-2xl md:text-3xl'> .../About me...</h1>
                 <div className='text-[#A6A6A6] text-base sm:text-lg md:text-xl lg:text-2xl text-left'>
-                    <h1 className='text-2xl md:text-3xl'> Hello! I'm Suraj, I'm a <span className='text-white'>full-stack developer</span>. <br />More than <span className='text-white'>3 years</span> experience</h1>
+                    <h1 className='text-2xl md:text-3xl'> Hello! I&apos;m Suraj, I&apos;m a <span className='text-white'>full-stack developer</span>. <br />More than <span className='text-white'>3 years</span> experience</h1>
                 </div>
             </div>
 

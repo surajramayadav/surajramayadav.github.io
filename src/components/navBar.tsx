@@ -1,8 +1,7 @@
 'use client'
-import React, { use, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { CiMenuFries } from 'react-icons/ci'
 import { IoMdClose } from 'react-icons/io'
-import { MdSunny } from 'react-icons/md'
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);

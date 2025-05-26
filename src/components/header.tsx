@@ -1,8 +1,7 @@
 import React from 'react'
 import { CiFacebook, CiLinkedin } from 'react-icons/ci'
 import { FaGithub, FaInstagram, FaTelegramPlane } from 'react-icons/fa'
-import { FiArrowLeft, FiArrowRight } from 'react-icons/fi'
-import Image from 'next/image'
+import { FiArrowRight } from 'react-icons/fi'
 import ProjectGallery from './projectGallery'
 
 export default function Header() {

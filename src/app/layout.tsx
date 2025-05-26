@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import {Fira_Code,Open_Sans } from "next/font/google";
 import "./globals.css";
-import NavBar from "../components/navBar";
 import ScrollToTop from "../components/ScrollToTop";
 
 const Fira_CodeFont = Fira_Code({

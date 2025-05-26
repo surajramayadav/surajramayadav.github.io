@@ -33,10 +33,12 @@ export const useScrollAnimation = () => {
       }
     }, 100);
 
+    const currentRef = elementRef.current;
+
     return () => {
       clearTimeout(timeoutId);
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);

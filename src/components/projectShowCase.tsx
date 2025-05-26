@@ -1,10 +1,10 @@
 'use client'
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6"; // or any arrow icon
 
 type ProjectImage = {
-  src: any;
+  src: StaticImageData | string;
   alt: string;
   className?: string;
 };
