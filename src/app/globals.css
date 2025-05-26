@@ -4,11 +4,108 @@
 @custom-variant dark (&:is(.dark *));
 
 *{
-  font-family: Open_SansontFont  ;
-
+  font-family: Open_SansontFont;
 }
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
 body {
   @apply bg-black text-white;
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  will-change: transform, opacity;
+}
+
+.animate-fade-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  will-change: transform, opacity;
+}
+
+.animate-fade-in {
+  animation: fadeInLeft 0.6s ease-out forwards;
+  -webkit-animation: fadeInLeft 0.6s ease-out forwards;
+}
+
+.animate-fade-in-right.animate-fade-in {
+  animation: fadeInRight 0.6s ease-out forwards;
+  -webkit-animation: fadeInRight 0.6s ease-out forwards;
+}
+
+.animate-delay-200 {
+  animation-delay: 200ms;
+  -webkit-animation-delay: 200ms;
+}
+
+.animate-delay-400 {
+  animation-delay: 400ms;
+  -webkit-animation-delay: 400ms;
+}
+
+.animate-delay-600 {
+  animation-delay: 600ms;
+  -webkit-animation-delay: 600ms;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .animate-fade-in-left {
+    transform: translateX(-20px);
+  }
+  
+  .animate-fade-in-right {
+    transform: translateX(20px);
+  }
+  
+  .animate-fade-in {
+    animation-duration: 0.5s;
+    -webkit-animation-duration: 0.5s;
+  }
+  
+  .animate-delay-200 {
+    animation-delay: 100ms;
+    -webkit-animation-delay: 100ms;
+  }
+  
+  .animate-delay-400 {
+    animation-delay: 200ms;
+    -webkit-animation-delay: 200ms;
+  }
+  
+  .animate-delay-600 {
+    animation-delay: 300ms;
+    -webkit-animation-delay: 300ms;
+  }
 }
 
 

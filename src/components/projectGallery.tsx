@@ -63,42 +63,40 @@ const ProjectGallery = () => {
   ];
 
   return (
-    <div className='relative mt-15 flex justify-center items-center overflow-hidden'>
+    <div className='relative mt-8 md:mt-15 flex justify-center items-center overflow-hidden px-4 md:px-8'>
       {/* Carousel Items */}
-      <div className='flex gap-6 transition-all duration-500 ease-in-out'>
+      <div className='flex gap-2 md:gap-6 transition-all duration-500 ease-in-out'>
         {visibleItems.map((project, index) => {
           const isCenter = index === 1;
           return (
             <div
               key={project.id}
-              className={`relative w-150 h-80 rounded-lg transition-all duration-500   ${
+              className={`relative w-[280px] h-[200px] md:w-[400px] md:h-[300px] lg:w-[500px] lg:h-[400px] rounded-lg transition-all duration-500 ${
                 isCenter
                   ? 'scale-110 z-10'
                   : 'scale-90 blur-sm opacity-60'
-              } ` }
+              }`}
             >
               <Image
                 src={project.image}
                 alt={project.title}
                 fill
-                className='object-cover '
+                className='object-cover rounded-lg'
               />
             {isCenter&&<>
-              <div className="absolute top-0 right-0 h-full w-[60%] bg-black/50 backdrop-blur-sm" />
-              <div className="absolute top-0 right-0 h-full w-[60%] z-20 p-6 flex flex-col justify-center items-end text-white text-left">
-  <h2 className="text-lg font-bold mb-2">{project.title}</h2>
-  <p className="text-sm line-clamp-3">{project.description}</p>
- <div className='flex flex-row gap-2 mt-10'>
- <div className='bg-white text-black rounded-full px-4 py-2'>
-    <h3>Read more</h3>
-   
-  </div>
-  <div className=' bg-white rounded-full px-2 py-2'>
-    <FiArrowRight size={24} className='text-black' />
-    </div>
- </div>
-
-</div>
+              <div className="absolute top-0 right-0 h-full w-[70%] md:w-[60%] bg-black/50 backdrop-blur-sm rounded-r-lg" />
+              <div className="absolute top-0 right-0 h-full w-[70%] md:w-[60%] z-20 p-3 md:p-6 flex flex-col justify-center items-end text-white text-left">
+                <h2 className="text-base md:text-lg lg:text-xl font-bold mb-1 md:mb-2">{project.title}</h2>
+                <p className="text-xs md:text-sm lg:text-base line-clamp-2 md:line-clamp-3">{project.description}</p>
+                <div className='flex flex-row gap-2 mt-4 md:mt-10'>
+                  <div className='bg-white text-black rounded-full px-3 py-1 md:px-4 md:py-2'>
+                    <h3 className="text-xs md:text-sm">Read more</h3>
+                  </div>
+                  <div className='bg-white rounded-full px-1 py-1 md:px-2 md:py-2'>
+                    <FiArrowRight size={20} className='text-black md:w-6 md:h-6' />
+                  </div>
+                </div>
+              </div>
             </>}
             </div>
           );
@@ -108,17 +106,17 @@ const ProjectGallery = () => {
       {/* Left Button */}
       <button
         onClick={handlePrev}
-        className='absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg z-10'
+        className='absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 md:p-3 shadow-lg z-10'
       >
-        <FiArrowLeft size={24} className='text-black' />
+        <FiArrowLeft size={20} className='text-black md:w-6 md:h-6' />
       </button>
 
       {/* Right Button */}
       <button
         onClick={handleNext}
-        className='absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg z-10'
+        className='absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 md:p-3 shadow-lg z-10'
       >
-        <FiArrowRight size={24} className='text-black' />
+        <FiArrowRight size={20} className='text-black md:w-6 md:h-6' />
       </button>
     </div>
   );

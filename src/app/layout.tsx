@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import {Fira_Code,Open_Sans } from "next/font/google";
 import "./globals.css";
 import NavBar from "../components/navBar";
+import ScrollToTop from "../components/ScrollToTop";
 
 const Fira_CodeFont = Fira_Code({
   subsets: ["latin"],weight:["400", "500", "600", "700"]
@@ -26,8 +27,8 @@ export default function RootLayout({
       <body
         className={`${Fira_CodeFont.className} ${Open_SansontFont.className} antialiased`}
       >
-       
         {children}
+        <ScrollToTop />
       </body>
     </html>
   );

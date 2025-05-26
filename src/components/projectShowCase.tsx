@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import React from "react";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6"; // or any arrow icon
@@ -26,11 +27,8 @@ export default function ProjectShowcase({
   images,
 }: ProjectShowcaseProps) {
   return (
-    <section className="min-h-screen bg-black flex flex-col justify-center items-center px-4 py-12">
-      <h2 className="text-center text-3xl md:text-4xl font-mono text-white mb-12 tracking-widest">
-        .../Projects ...
-      </h2>
-      <div className="flex flex-col md:flex-row gap-12 w-full max-w-6xl">
+    
+      <div className="flex flex-col md:flex-row gap-12 md:gap-24 w-full max-w-6xl mt-10 mb-10">
         {/* Left Side */}
         <div className="flex-1 flex flex-col justify-center">
           <h3 className="text-white text-2xl font-semibold mb-4">{title}</h3>
@@ -56,7 +54,7 @@ export default function ProjectShowcase({
           </a>
         </div>
         {/* Right Side */}
-        <div className="flex-1 flex flex-wrap gap-4 justify-center items-center relative">
+        <div className="flex-1 flex flex-wrap gap-4 justify-center items-center relative mt-8 md:mt-0">
           {images.map((img, idx) => (
             <Image key={idx} src={img.src} className={img.className} alt={img.alt}/>
           ))}
@@ -64,6 +62,5 @@ export default function ProjectShowcase({
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 rounded-full border border-gray-700 opacity-30 z-0"></div>
         </div>
       </div>
-    </section>
   );
 }
